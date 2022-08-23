@@ -11,24 +11,23 @@ I wanted to design an online portfolio that would be professional and representa
 - My brand and my life codes
 - social menu to navigate to different pages
 - media links
+
 2. Bio Page
 - Menu to navigate to different pages      
 - Social media links
 - main use is to go back to the main page
+
 3. Project page
 - Place holder of future projects that i will upload in the main section
 - Menu to navigate to different pages within the site
 - Social media links
-4.Contact Page
+
+4. Contact Page
 - Menu to navigate to different pages within the site
 - background music while sending me a message ( not autoplay)
 - Social media links
 - Contact form to communicate with me (not yet interactive)
-#  Interactive features
-1.     mouse hover subtitles , mouse enter and leave nav , alerts 
-2.     Animation via css and add event listeners to certain animations
-3.     Display button that shows text
-4.     Had a stop button for autoplay music switched for html interaction 
+
 #  About
 Thank you :goat: for checking out my Portfolio Project. I'm a Canadian Software Engineering student at General Assembly and a future freelancer. I like helping others by sharing ideas and new creations. I’m always looking forward to working with new people and learning more skills. If you would like to work with me, hire me or mentor me, please feel free to contact me on Linkedin at https://www.linkedin.com/in/sean-moses-etienne-b5356823a/ . Best regards! :goat:
 #  Wireframes
