@@ -1,0 +1,269 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+head {
+  display: none;
+}
+html {
+ font-size: 20px;
+}
+body {
+ width: 100vw;
+ position: relative;
+ max-width: 100%;
+ 
+}
+.Navigation-section{
+ display: block;
+ position: relative;
+ grid-area: header;
+}
+.backimo {
+ background-image: url(./Photos/bluematrix.png);
+ width: 100%;
+ height: 100%;
+ display: flex;
+ background-position: center;
+ position: relative;
+ background-size: 500px;
+}
+.name {
+ position: absolute;
+ font-style: italic;
+ font-family: Lemon, sans-serif;
+ color: white;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+ width: 100%;
+}
+.headpic {
+ opacity: 1;
+}
+.All-navs{
+ position: absolute;
+ top: 0;
+ right: 30px;
+ font-size: 65px;
+}
+a {
+ text-decoration: none;
+}
+.navs {
+ display: inline;
+ position: relative;
+ padding: 0px 30px 0px 30px;
+ justify-content: center;
+ font-family: lemon;
+ font-style: italic;
+ font-weight: bold;
+ color: white;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+}
+.slogan{
+ position: absolute;
+ text-align: justify;
+ display: inline;
+ top: 30%;
+ left: 30%;
+ font-size: 30px;
+ color: white;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+ font-family: 'Gloria Hallelujah', cursive !important;
+}
+.subtitles {
+ font-style: italic;
+ color: white;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+ font-family: 'Euphoria Script', cursive;
+ font-size: 2cm;
+ text-align: center;
+ padding-top: 30px;
+}
+.subtitles2 {
+ font-style: italic;
+ color: white;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+ font-family: 'Euphoria Script', cursive;
+ font-size: 2cm;
+ text-align: center;
+ padding-top: 30px;
+}
+.Focus {
+ margin-top: 10px;
+ margin-left: 300px;
+ font-size: 70px;
+ overflow: hidden;
+ white-space: nowrap;
+ width: 20em;
+ animation: move-text;
+ animation-duration: 10s;
+ animation-delay: 3s;
+ animation-iteration-count: infinite;
+}
+@keyframes move-text {
+from {width: 0;}
+ 
+}
+main{
+ display: flex;
+ background-image: linear-gradient(#051d72, white);
+ justify-content: space-between;
+ align-content: center;
+ grid-gap: 5vw;
+ font-family: 'Aladin', cursive; ;
+}
+.brand {
+ grid-area: main; 
+ justify-content: center;
+ text-align: match-parent;
+ margin: 10px;
+ width: 100vw;
+}
+.logobrand {
+ width: 350px;
+ height: 350px;
+ position: absolute;
+}
+p{
+ font-size: 35px;
+}
+.myBtn {
+ text-align: center;
+ width: 30%;
+ font-size: 50px;
+ height: auto;
+ -webkit-text-stroke: 1px #ffffff;
+ text-shadow: 3px 3px #4069fd;
+}
+.lifecodes{
+ font-size: 35px;
+ opacity: 0;
+}
+img {
+ width: 350px;
+ height: 350px;
+}
+.codes {
+ grid-area: sidebar;
+ justify-content: center; 
+ width: 100vw;
+ margin: 10px;
+
+}
+footer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  position: relative;
+  background-image: linear-gradient(white, #051d72);
+}
+.copyright{
+ bottom: 0;
+ position: absolute;
+ color: white;
+ -webkit-text-stroke: 1px #051d72;
+ text-shadow: 3px 3px #4069fd;
+}
+.SML-container{
+ width: 100vw;
+ text-align: center;
+}
+.SML-container img {
+ display: inline-flex;
+ flex-wrap: nowrap;
+ width: 100px;
+ height: 100px;
+ margin: 20px;
+}
+/* s/o css-tricks animation */
+@keyframes shake {
+ 10%, 90% {
+     transform: translate3d(-1px, 0, 0);
+   }
+   
+   20%, 80% {
+     transform: translate3d(2px, 0, 0);
+   }
+ 
+   30%, 50%, 70% {
+     transform: translate3d(-4px, 0, 0);
+   }
+ 
+   40%, 60% {
+     transform: translate3d(4px, 0, 0);
+   }
+}
+.footer-linkedin-logo {
+ display: inline-block;
+ animation-name: shake;
+ animation-duration: 3s;
+ animation-delay: 5s;
+ animation-iteration-count: infinite;
+ 
+ 
+}
+.footer-github-logo {
+ display: inline-block;
+ animation-name: shake;
+ animation-duration: 3s;
+ animation-delay: 5s;
+ animation-iteration-count: infinite;
+ 
+}
+.footer-instagram-logo {
+ display: inline-block;
+ animation-name: shake;
+ animation-duration: 3s;
+ animation-delay: 5s;
+ animation-iteration-count: infinite;
+ 
+}
+.footer-twitter-logo {
+ display: inline-block;
+ animation-name: shake;
+ animation-duration: 3s;
+ animation-delay: 5s;
+ animation-iteration-count: infinite;
+}
+.signature {
+ font-size: 35px;
+ text-align: center;
+ width: 100vw;
+ margin: 10px;
+ color: white;
+ -webkit-text-stroke: 1px #051d72;
+ text-shadow: 3px 3px #4069fd;
+} 
+.footer-link {
+ /* animation: shake 2s ease-in; 
+ animation-iteration-count: infinite; */
+}
+@keyframes shake {
+ 0% {
+     transform: translate(0);
+ }
+
+20%,
+40%,
+60%,
+90%{
+ transform:translate(.8em);
+ box-shadow: 0px 10px 30px black;
+}
+10%,
+30%,
+50%{
+ transform: translate(-2.em);
+}
+70%,
+100%{
+ transform: translate(0);
+}   
+}
