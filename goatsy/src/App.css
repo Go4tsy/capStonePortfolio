@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
 head {
   display: none;
 }
@@ -14,7 +19,6 @@ body {
  width: 100vw;
  position: relative;
  max-width: 100%;
- 
 }
 .Navigation-section{
  display: block;
@@ -273,10 +277,13 @@ footer {
  transform: translate(0);
 }   
 }
-.Contactlogobrand {
-  width: 350px;
-  height: 350px;
-}
+
+/* .Contactlogo img {
+  float: left;
+  display: inline-flex;
+  text-align: center;
+  margin: auto 5px;
+} */
 
 legend {
   text-align: center;
