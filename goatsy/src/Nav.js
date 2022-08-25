@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,31 +10,33 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Navigation = () => {
     return (
-
-            <Navbar className="All-navs">
-                <Container>
+            <Navbar className="All-navs" expand="lg">
+                <Container  className="navs" >
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="All-navs">
 
-                        <Nav.Link href="/bio">
+                        <Nav.Link href="/bio"  className="navs">
 
-                            <li className="navs">Bio</li>
+                            Bio
                         </Nav.Link>
 
-                        <Nav.Link href="/projects">
+                        <Nav.Link href="/projects"   className="navs">
 
-                            <li className="navs">Projects</li>
+                           Projects
                         </Nav.Link>
 
-                        <Nav.Link href="/resume">
+                        <Nav.Link href="/resume"  className="navs">
 
-                            <li className="navs">Resume</li>
+                            Resume
                         </Nav.Link>
 
-                        <Nav.Link href="/contact">
+                        <Nav.Link href="/contact"  className="navs">
 
-                            <li className="navs">Contact</li>
+                           Contact
                         </Nav.Link>
                     </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
     );

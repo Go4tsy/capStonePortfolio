@@ -111,6 +111,12 @@ a {
 from {width: 0;}
  
 }
+body{
+  background-image: linear-gradient(#051d72, white);
+  justify-content: space-between;
+  align-content: center;
+  font-family: 'Aladin', cursive; ;
+}
 main{
  display: flex;
  background-image: linear-gradient(#051d72, white);
@@ -266,4 +272,30 @@ footer {
 100%{
  transform: translate(0);
 }   
+}
+.Contactlogobrand {
+  width: 350px;
+  height: 350px;
+}
+
+legend {
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+}
+.formbtn {
+  -webkit-text-stroke: 1px #ffffff;
+  text-shadow: 3px 3px #4069fd;
+}
+form {
+  font-size: 40px;
+
+}
+label {
+-webkit-text-stroke: 1px #ffffff;
+text-shadow: 3px 3px #4069fd;
+font-family: 'Euphoria Script', cursive;
+}
+input {
+font-size: 30px;
 }
