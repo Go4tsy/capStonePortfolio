@@ -26,7 +26,7 @@ const Navigation = () => {
                            Projects
                         </Nav.Link>
 
-                        <Nav.Link href="/resume"  className="navs">
+                        <Nav.Link className="navs" href="https://docs.google.com/document/d/1gXLg4DcfFMO_JcrsPLrQwhHNx9cIUznX5cd3gs6Hptw/view?usp=sharing" target="_blank" rel="noopener noreferrer">
 
                             Resume
                         </Nav.Link>
