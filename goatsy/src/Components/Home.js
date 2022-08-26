@@ -1,8 +1,16 @@
 import React from 'react';
-import logo from './Photos/logo.jpg'
+import logo from '../Photos/logo.jpg'
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Fade from 'react-bootstrap/Fade';
 
 const Home = () => {
+    const [open, setOpen] = useState(false);
+
+
+
     return (
+
         <>
             <main >
 
@@ -15,7 +23,11 @@ const Home = () => {
                 <div class="codes">
                     <h1 class="subtitles2"> My life codes</h1>
 
-                    <button class="myBtn">Click me</button>
+                    <Button  class="myBtn" onClick={() => setOpen(!open)} aria-controls="example-fade-text"aria-expanded={open}>
+                    Click me
+                    </Button>
+
+                    <Fade in={open}>
                     <p>
                         <ul id="lifecodes">
 
@@ -32,6 +44,7 @@ const Home = () => {
 
                         </ul>
                     </p>
+                    </Fade>
                 </div>
             </main>
         </>
