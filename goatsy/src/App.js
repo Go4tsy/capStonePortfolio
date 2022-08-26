@@ -1,11 +1,10 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Switch, useLocation } from 'react-router-dom'
 import Home from './Components/Home.js'
 import Footer from './Footer.js';
 import Header from './Header';
 import Contact from './Components/Contact';
-import Project from './Components/Project';
-
+import Project from './Project Components/Project';
 
 
 function App() {

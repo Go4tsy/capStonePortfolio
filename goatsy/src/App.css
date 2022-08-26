@@ -49,8 +49,10 @@ body {
 .All-navs{
  position: absolute;
  top: 0;
- right: 30px;
+ right: 20%;
  font-size: 65px;
+ text-align: center;
+ display: inline-flex;
 }
 a {
  text-decoration: none;
@@ -105,11 +107,12 @@ a {
  font-size: 70px;
  overflow: hidden;
  white-space: nowrap;
- width: 20em;
+ width: 5em;
  animation: move-text;
  animation-duration: 10s;
- animation-delay: 3s;
+ animation-delay: 2s;
  animation-iteration-count: infinite;
+ max-width: 100%;
 }
 @keyframes move-text {
 from {width: 0;}
@@ -305,4 +308,12 @@ font-family: 'Euphoria Script', cursive;
 }
 input {
 font-size: 30px;
+}
+
+.projectCard {
+  display: inline-block;
+  
+}
+.textCard {
+  font-size: medium;
 }
