@@ -1,7 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, useLocation, Routes } from 'react-router-dom';
 
+import ReactGA from 'react-ga';
 
 import Home from './Components/Home.js'
 import Footer from './Footer.js';
@@ -32,36 +33,35 @@ function App() {
     }
   }, [menuOpen])
 
+  // Google Analytics - s/o tylerConfeti
+  ReactGA.initialize(process.env.REACT_APP_ANALYTICS);
+  ReactGA.pageview(window.location.pathname);
 
+  const handleResumeClick = () => {
+    ReactGA.event({
+      category: "Links",
+      action: "Resume",
+      label: "Resume Link Clicked",
+      value: 1
+    })
+  }
 
   return (
+    <>
+      <Header title="bio" menuOpen={menuOpen} toggleMenu={toggleMenu} handleResumeClick={handleResumeClick} />
     <div className='app'>
-      <Switch>
-        <Route path='/' exact>
-          <Banner menuOpen={menuOpen} toggleMenu={toggleMenu} />
-        </Route>
+      <Routes>
+        <Route path='/' exact element={<Banner menuOpen={menuOpen} toggleMenu={toggleMenu} handleResumeClick={handleResumeClick} /> } />
 
+        <Route path='/bio' element={ <Home />} />
 
-        <Route path='/bio' exact >
-          <Header title="bio" menuOpen={menuOpen} toggleMenu={toggleMenu} />
-          <Home />
-          <Footer />
-        </Route >
+        <Route path='/contact' element={<Contact />} />
 
-        <Route path='/contact' exact>
-          <Header title="contact" menuOpen={menuOpen} toggleMenu={toggleMenu} />
-          <Contact />
-          <Footer />
-        </Route >
-
-        <Route path='/projects' exact>
-          <Header title="projects" menuOpen={menuOpen} toggleMenu={toggleMenu} />
-          <Project />
-          <Footer />
-        </Route>
-      </Switch>
+        <Route path='/projects' exact element={ <Project handleResumeClick={handleResumeClick} />}/>
+      </Routes>
     </div>
-
+      <Footer />
+    </>
   );
 }
 

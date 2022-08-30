@@ -3,8 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import portfolioCard from '../Photos/portfolioCard.png'
 import ecommerCard from '../Photos/ecommerCard.png'
-import { useNavigate } from "react-router-dom";
-import {Link} from 'react-router-dom';
+
 import snapBookCard from '../Photos/snapBookCard.png'
 
 

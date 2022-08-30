@@ -49,7 +49,7 @@ body {
 .All-navs{
  position: absolute;
  top: 0;
- right: 20%;
+ right: 10%;
  font-size: 65px;
  text-align: center;
  display: inline-flex;
@@ -317,3 +317,8 @@ font-size: 30px;
 .textCard {
   font-size: medium;
 }
+
+/* .ArrowIcon {
+  font-size: 20px;
+  border: 2px 2px 2px black;
+} */
