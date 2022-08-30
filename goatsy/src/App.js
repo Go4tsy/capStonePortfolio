@@ -5,7 +5,7 @@ import { Route, Switch, useLocation } from 'react-router-dom'
 
 import Home from './Components/Home.js'
 import Footer from './Footer.js';
-import Header from './Header';
+import Header from './Header.js';
 
 import Contact from './Components/Contact';
 import Project from './Project Components/Project';

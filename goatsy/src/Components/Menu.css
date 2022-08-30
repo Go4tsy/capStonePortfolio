@@ -1,0 +1,54 @@
+.menu {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: transparent; */
+    /* background-color: #274B63; */
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: bebas-neue-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.menu-list-main {
+    list-style: none;
+    margin-bottom: 100px;
+    z-index: 10;
+    cursor: pointer;
+    text-align: center;
+}
+
+.list-item-main {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.list-item-secondary {
+    font-size: 2rem;
+    margin: 10px 0 10px 20px;
+}
+
+.link-tag {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu-background-container {
+    width: 0vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.menu-background-image {
+    height: 100%;
+    transform: translateX(-40%);
+    
+    
+}
