@@ -44,13 +44,13 @@ const Header = ({ title, menuOpen, toggleMenu, handleResumeClick }) => {
                 <div className="header-hamburger-menu" style={{ marginRight: menuOpen && !isMobile && path !== '/' ? '15px' : '0px' }}>
 
                     {/* <HamburgerMenu
-        //                 className="hamburger-menu"
-        //                 isOpen={menuOpen}
-        //                 menuClicked={toggleMenu}
-        //                 color={menuOpen ? "white" : "black"}
-        //                 width={21}
-        //                 height={14}
-        //             /> */}
+                         className="hamburger-menu"
+                         isOpen={menuOpen}
+                        menuClicked={toggleMenu}
+                         color={menuOpen ? "white" : "black"}
+                         width={21}
+                         height={14}
+                     /> */}
 
                     {menuOpen && <Menu toggleMenu={toggleMenu} handleResumeClick={handleResumeClick} />}
                 </div>

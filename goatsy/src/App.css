@@ -57,6 +57,10 @@ body {
 a {
  text-decoration: none;
 }
+
+.navs.container {
+right: 100%;
+}
 .navs {
  display: inline;
  position: relative;

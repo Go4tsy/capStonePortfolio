@@ -9,6 +9,8 @@ import logo from '../Photos/logo.jpg';
 import './Banner.css';
 import Menu from '../Components/Menu';
 
+import Audio from '../Audioplay/Audio';
+
 function Banner({ menuOpen, toggleMenu }) {
 
 
@@ -20,17 +22,18 @@ function Banner({ menuOpen, toggleMenu }) {
     }, [])
 
     return (
-        <div className="banner-container" onScroll={toggleMenu}>
-            {!menuOpen &&
-                <div className="banner-logo-container">
-                    <img className="banner-logo" src={logo} alt="Goatsy" onClick={toggleMenu} />
-                </div>
-            }
-            <div className="banner-background-container">
-                <img className="banner-background-image" src={backgroundImage} alt="Matrix background" />
-            </div>
-            <div className="banner-hamburger-menu">
-                {/* <HamburgerMenu
+        <>
+            <div className="banner-container" onScroll={toggleMenu}>
+                {!menuOpen &&
+                    <div className="banner-logo-container">
+                        <img className="banner-logo" src={logo} alt="Goatsy" onClick={toggleMenu} />
+                    </div>
+                }
+                {/* <div className="banner-background-container">
+                    <img className="banner-background-image" src={backgroundImage} alt="Matrix background" />
+                </div> */}
+                <div className="banner-hamburger-menu">
+                    {/* <HamburgerMenu
                     className="hamburger-menu"
                     isOpen={menuOpen}
                     menuClicked={toggleMenu}
@@ -38,9 +41,11 @@ function Banner({ menuOpen, toggleMenu }) {
                     width={21}
                     height={14}
                 /> */}
+                </div>
+                {menuOpen && <Menu toggleMenu={toggleMenu} />}
             </div>
-            {menuOpen && <Menu toggleMenu={toggleMenu} />}
-        </div>
+            {/* <Audio /> */}
+        </>
     )
 }
 
