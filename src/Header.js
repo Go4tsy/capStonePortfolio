@@ -18,12 +18,12 @@ import Menu from './Components/Menu'
 const Header = ({ title, menuOpen, toggleMenu, handleResumeClick }) => {
 
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
-    const goBack = () => navigate('/', { replace: true });
-    // Allows user to return to the page that is being displayed by the header
-    const path = title.split(' ').join('');
+    // const goBack = () => navigate('/', { replace: true });
+    // // Allows user to return to the page that is being displayed by the header
+    // // const path = title.split(' ').join('');
 
     return (
 
@@ -41,7 +41,8 @@ const Header = ({ title, menuOpen, toggleMenu, handleResumeClick }) => {
                         <h1> Goatsy, Follow one course until succesful<br /></h1>
                         <h2 className="Focus"> F.O.C.U.S</h2>
                     </section>
-                <div className="header-hamburger-menu" style={{ marginRight: menuOpen && !isMobile && path !== '/' ? '15px' : '0px' }}>
+                    
+                {/* <div className="header-hamburger-menu" style={{ marginRight: menuOpen && !isMobile && path !== '/' ? '15px' : '0px' }}> */}
 
                     {/* <HamburgerMenu
                          className="hamburger-menu"
@@ -53,7 +54,7 @@ const Header = ({ title, menuOpen, toggleMenu, handleResumeClick }) => {
                      /> */}
 
                     {menuOpen && <Menu toggleMenu={toggleMenu} handleResumeClick={handleResumeClick} />}
-                </div>
+                {/* </div> */}
             </header>
 
             <Navigation />

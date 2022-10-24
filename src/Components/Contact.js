@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form';
 // import emailjs from 'emailjs-com'
 import { useRef } from 'react';
 import emailjs from "@emailjs/browser";
-
+import Footer from '../Footer';
+import Header from '../Header';
 
 
 const Contact = () => {
@@ -30,6 +31,8 @@ const Contact = () => {
     }
     return (
         <>
+        <Header />
+
             <body>
 
                 <legend>Contact me!</legend>
@@ -64,6 +67,8 @@ const Contact = () => {
                 </Form>
             <img className="Contactlogo" src={logo} alt="brand" />
             </body>
+            
+            <Footer />
         </>
     );
 };

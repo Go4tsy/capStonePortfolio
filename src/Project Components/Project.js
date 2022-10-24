@@ -5,6 +5,8 @@ import portfolioCard from '../Photos/portfolioCard.png'
 import ecommerCard from '../Photos/ecommerCard.png'
 
 import snapBookCard from '../Photos/snapBookCard.png'
+import Header from '../Header';
+import Footer from '../Footer';
 
 
     
@@ -21,6 +23,8 @@ const Project = () => {
     return (
 
         <>
+        <Header />
+        <main>
         <Card style={{ width: '22rem' }} className="projectCard">
         <Card.Img variant="top" src={portfolioCard} />
         <Card.Body>
@@ -70,6 +74,8 @@ const Project = () => {
           <Button variant="primary">View project</Button>
         </Card.Body>
       </Card> */}
+      </main>
+      <Footer />
             
         </>
     );

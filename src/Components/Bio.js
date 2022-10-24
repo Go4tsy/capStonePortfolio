@@ -3,8 +3,11 @@ import logo from '../Photos/logo.jpg'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
+import Header from '../Header.js';
+import Footer from '../Footer';
 
-const Home = () => {
+
+const Bio = () => {
     const [open, setOpen] = useState(false);
 
 
@@ -12,18 +15,19 @@ const Home = () => {
     return (
 
         <>
+        <Header />
             <main >
 
-                <div class="brand">
-                    <h1 class="subtitles"> Transform your brand</h1>
+                <div className="brand">
+                    <h1 className="subtitles"> Transform your brand</h1>
                     <p>I am a freelancer Software engineer. Specialized in helping brands grow fast and sucessfully. My goal is to help you reach your goals. Let's think big together, i want to help people improve their lives with products designed by me. Let me hear your story.</p>
                     <img id="logobrand" src={logo} alt="brand" />
                 </div>
 
-                <div class="codes">
-                    <h1 class="subtitles2"> My life codes</h1>
+                <div className="codes">
+                    <h1 className="subtitles2"> My life codes</h1>
 
-                    <Button  class="myBtn" onClick={() => setOpen(!open)} aria-controls="example-fade-text"aria-expanded={open}>
+                    <Button  className="myBtn" onClick={() => setOpen(!open)} aria-controls="example-fade-text"aria-expanded={open}>
                     Click me
                     </Button>
 
@@ -47,8 +51,9 @@ const Home = () => {
                     </Fade>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };
 
-export default Home;
+export default Bio;

@@ -162,11 +162,16 @@ p{
 .lifecodes{
  font-size: 35px;
  opacity: 0;
-}
-img {
+} 
+img #logobrand  {
  width: 350px;
  height: 350px;
 }
+
+img .headpic  {
+  width: 350px;
+  height: 350px;
+ }
 .codes {
  grid-area: sidebar;
  justify-content: center; 
