@@ -52,3 +52,26 @@
     
     
 }
+
+@media (max-width: 640px) {
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .menu-list-main {
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
+  .list-item-main {
+    font-size: 2rem;
+    margin: 18px 0;
+  }
+  .list-item-secondary {
+    font-size: 1.2rem;
+    margin: 10px 0 10px 10px;
+  }
+}

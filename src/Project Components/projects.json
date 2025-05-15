@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Vanilla Portfolio",
+    "description": "My first project. HTML, CSS, JS.",
+    "image": "/Photos/portfolioCard.png",
+    "link": "https://go4tsy.github.io/portfolioWebsite/index.html"
+  },
+  {
+    "title": "Ecommer",
+    "description": "This e-commerce website is a replica which was made using Shopify. I went ahead and used ReactJS with a third party API.",
+    "image": "/Photos/ecommerCard.png",
+    "link": "https://roseeesthetique.netlify.app"
+  },
+  {
+    "title": "SnapBook",
+    "description": "This project, was my first team project. We made our own version of a GooglePhotos where the user can upload pictures in an album.",
+    "image": "/Photos/snapBookCard.png",
+    "link": "https://snapbook.netlify.app"
+  }
+] 
