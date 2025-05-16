@@ -1,0 +1,43 @@
+.projects-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4069fd;
+}
+.projects-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    gap: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+  .projects-intro {
+    font-size: 1rem;
+  }
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+} 

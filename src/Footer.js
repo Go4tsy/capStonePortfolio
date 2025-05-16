@@ -25,7 +25,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="footer-instagram-logo">
-                        <a className="footer-link" href="https://www.instagram.com/smesm3/" target="_blank" rel="noopener noreferrer">
+                        <a className="footer-link" href="https://www.instagram.com/goatsy__/" target="_blank" rel="noopener noreferrer">
                             <img className="connect-logo" src={instagram} alt="instagram logo" />
                         </a>
                     </div>

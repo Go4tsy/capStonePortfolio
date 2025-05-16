@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import ProjectCard from './ProjectCard';
 import './Project.css';
 
-const Project = () => {
+const ProjectGrid = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectGrid; 

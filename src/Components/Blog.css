@@ -43,4 +43,44 @@
 }
 .app.dark .blog-article time {
   color: #8ab4f8;
+}
+
+.blog-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.blog-edit-btn {
+  background: #f4f6fa;
+  border: 1.5px solid #4069fd;
+  color: #4069fd;
+  border-radius: 5px;
+  padding: 4px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.blog-edit-btn:hover {
+  background: #e6edff;
+}
+
+.blog-delete-btn {
+  background: #ffeaea;
+  border: 1.5px solid #ff4d4f;
+  color: #ff4d4f;
+  border-radius: 5px;
+  padding: 4px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.blog-delete-btn:hover {
+  background: #ffd6d6;
 } 

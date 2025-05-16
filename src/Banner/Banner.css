@@ -1,71 +1,97 @@
-.banner-container {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: fixed;
+.banner-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 70px; /* header height */
+  box-sizing: border-box;
 }
-
-.banner-logo-container {
-    width: 350px;
-    z-index: 100;
-    margin-bottom: 80px;
-}
-
-.banner-logo {
-    width: 100%;
-}
-
 .banner-background-container {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    overflow: hidden;
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100%;
+  z-index: 1;
+  overflow: hidden;
 }
-
 .banner-background-image {
-    height: 100%; 
-    width: 100%;
-background-image: -moz-linear-gradient();
-    
-        
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.banner-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+.banner-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px #4069fd33;
+  margin-bottom: 1rem;
+}
+.banner-title {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+.banner-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.banner-cta {
+  display: inline-block;
+  background: #4069fd;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+.banner-cta:hover {
+  background: #233a7d;
 }
 .banner-hamburger-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-     z-index: 100; 
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
 }
-
 @media (max-width: 640px) {
-  .banner-container {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-    position: relative;
+  .banner-hero {
+    min-height: 50vh;
+    padding-top: 56px;
   }
-  .banner-logo-container {
-    width: 180px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  .banner-logo {
+    width: 80px;
+    height: 80px;
   }
-  .banner-background-container {
-    width: 100vw;
-    height: 100vh;
+  .banner-title {
+    font-size: 1.5rem;
   }
-  .banner-background-image {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+  .banner-cta {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
   .banner-hamburger-menu {
-    top: 16px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
   }
 }
 
@@ -78,6 +104,4 @@ background-image: -moz-linear-gradient();
 .app.dark .banner-background-image {
   opacity: 0.7;
 }
-.app.dark .banner-hamburger-menu {
-  /* Optionally adjust color for dark mode */
-}
+

@@ -16,6 +16,7 @@ function Menu({ toggleMenu, handleResumeClick }) {
         <ul className="menu-list-main">
             <Link className="link-tag" to="/bio" onClick={toggleMenu}><li className="list-item-main">Bio</li></Link>
             <Link className="link-tag" to="/projects" onClick={toggleMenu}><li className="list-item-main">Projects</li></Link>
+            <Link className="link-tag" to="/blog" onClick={toggleMenu}><li className="list-item-main">Blog</li></Link>
             <Link className="link-tag" to="/contact" onClick={toggleMenu}><li className="list-item-main">Contact Me</li></Link>
             <a className="list-item-main link-tag" onClick={handleResumeClick} href="https://docs.google.com/document/d/1gXLg4DcfFMO_JcrsPLrQwhHNx9cIUznX5cd3gs6Hptw/view?usp=sharing" target="_blank" rel="noopener noreferrer" >View Resume</a>
         </ul>

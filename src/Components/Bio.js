@@ -3,8 +3,6 @@ import logo from '../Photos/logo.jpg'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
-import Header from '../Header.js';
-import Footer from '../Footer';
 import { Helmet } from 'react-helmet';
 
 
@@ -20,7 +18,6 @@ const Bio = () => {
             <title>Bio | Sean Etienne Portfolio</title>
             <meta name="description" content="Learn more about Sean Etienne, his background, skills, and experience." />
         </Helmet>
-        <Header />
         <main>
             <div style={{ textAlign: 'center', margin: '2rem 0' }}>
                 <a
@@ -71,7 +68,6 @@ const Bio = () => {
                 </Fade>
             </section>
         </main>
-        <Footer />
         </>
     );
 };

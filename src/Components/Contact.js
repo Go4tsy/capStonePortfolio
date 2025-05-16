@@ -5,8 +5,6 @@ import Form from 'react-bootstrap/Form';
 // import emailjs from 'emailjs-com'
 import { useRef } from 'react';
 import emailjs from "@emailjs/browser";
-import Footer from '../Footer';
-import Header from '../Header';
 import { Helmet } from 'react-helmet';
 
 
@@ -36,7 +34,6 @@ const Contact = () => {
             <title>Contact | Sean Etienne Portfolio</title>
             <meta name="description" content="Contact Sean Etienne for collaboration, questions, or opportunities." />
         </Helmet>
-        <Header />
 
             <body>
 
@@ -72,8 +69,6 @@ const Contact = () => {
                 </Form>
             <img className="Contactlogo" src={logo} alt="Sean Etienne Brand Logo" loading="lazy" />
             </body>
-            
-            <Footer />
         </>
     );
 };
