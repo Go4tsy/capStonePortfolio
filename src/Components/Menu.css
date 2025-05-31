@@ -20,6 +20,9 @@
 @media (min-width: 901px) {
   .menu {
     display: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 }
 

@@ -1,5 +1,5 @@
 .header-container {
-    position: sticky;
+    position: relative;
     top: 0;
     width: 100%;
     height: 70px;
@@ -68,17 +68,17 @@
     .desktop-nav {
         display: none !important;
     }
-}
-
-@media (max-width: 640px) {
-    .header-nav {
-        display: none;
-    }
     .header-hamburger-menu {
         display: block;
         position: absolute;
         right: 1rem;
         top: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-nav {
+        display: none;
     }
     .header-logo {
         width: 40px;

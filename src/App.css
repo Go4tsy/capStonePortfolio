@@ -14,11 +14,26 @@ head {
 }
 html {
  font-size: 20px;
+ overflow-x: hidden;
+ width: 100%;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ scroll-behavior: smooth;
+ touch-action: manipulation;
+ box-sizing: border-box;
 }
 body {
- width: 100vw;
- position: relative;
+ width: 100%;
  max-width: 100%;
+ overflow-x: hidden;
+ position: relative;
+ background-image: linear-gradient(#051d72, white);
+ justify-content: space-between;
+ align-content: center;
+ font-family: 'Aladin', cursive;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 .Navigation-section{
  display: block;
@@ -113,12 +128,6 @@ right: 100%;
 @keyframes move-text {
 from {width: 0;}
  
-}
-body{
-  background-image: linear-gradient(#051d72, white);
-  justify-content: space-between;
-  align-content: center;
-  font-family: 'Aladin', cursive; ;
 }
 main{
  display: flex;
