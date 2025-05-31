@@ -1,6 +1,7 @@
 .header-container {
-    position: relative;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 70px;
     background: #fff;
@@ -8,8 +9,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    z-index: 1000;
+    z-index: 2000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
 
 .header-logo-container {
@@ -86,5 +88,21 @@
     }
     .header-container {
         height: 56px;
+        padding: 0 0.5rem;
     }
+}
+
+/* Add padding to main content to prevent it from being hidden under the fixed header */
+main, .about-container, .brand, .codes, .skills-section, .experience-section, .values-section {
+    padding-top: 80px;
+}
+@media (max-width: 640px) {
+    main, .about-container, .brand, .codes, .skills-section, .experience-section, .values-section {
+        padding-top: 62px;
+    }
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }

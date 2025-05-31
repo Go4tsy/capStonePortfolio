@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import Menu from './Components/Menu';
 import HamburgerMenu from 'react-hamburger-menu';
 
 const Header = ({ menuOpen, toggleMenu, handleResumeClick }) => {
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(window.scrollY);
+
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY < 10) {
+            setShowHeader(true);
+          } else if (currentScrollY > lastScrollY.current) {
+            setShowHeader(false); // scrolling down
+          } else {
+            setShowHeader(true); // scrolling up
+          }
+          lastScrollY.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header-container">
+    <header className={`header-container${showHeader ? '' : ' header-hidden'}`}>
       <div className="header-logo-container">
         <Link to="/">
           <img className="header-logo" src="/images/pfp.png" alt="Sean-Moses Etienne logo" />
