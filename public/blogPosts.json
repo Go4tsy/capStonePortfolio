@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome to My Blog!",
+    "slug": "welcome-to-my-blog",
+    "author": "Sean Etienne",
+    "date": "2024-06-01",
+    "excerpt": "This is the first post on my upgraded portfolio blog. Stay tuned for more updates!",
+    "content": "<p>This is the <strong>first post</strong> on my upgraded portfolio blog. Stay tuned for more updates and technical deep-dives!</p>",
+    "tags": ["intro", "portfolio"]
+  },
+  {
+    "id": 2,
+    "title": "Building a Scalable Portfolio",
+    "slug": "building-scalable-portfolio",
+    "author": "Sean Etienne",
+    "date": "2024-06-05",
+    "excerpt": "How I upgraded my portfolio to support dynamic content, analytics, and CMS integration.",
+    "content": "<p>In this post, I share the process of upgrading my portfolio to support dynamic content, analytics, and future CMS integration. The stack includes React, JSON data, and more.</p>",
+    "tags": ["portfolio", "react", "upgrade"]
+  }
+] 

@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 .header-logo-container {
@@ -21,7 +21,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
 .header-nav {
@@ -39,7 +39,7 @@
 }
 
 .header-nav-list li a {
-    color: #4069fd;
+    color: #0a0f1c;
     font-weight: 600;
     text-decoration: none;
     font-size: 1.1rem;
@@ -47,7 +47,7 @@
 }
 
 .header-nav-list li a:hover {
-    color: #233a7d;
+    color: #1a2951;
 }
 
 .header-hamburger-menu {

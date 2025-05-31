@@ -25,15 +25,7 @@ body {
  position: relative;
  grid-area: header;
 }
-.backimo {
- background-image: url(./Photos/bluematrix.png);
- width: 100%;
- height: 100%;
- display: flex;
- background-position: center;
- position: relative;
- background-size: 500px;
-}
+/* background-image: url(/images/bluematrix.png); */
 .name {
  position: absolute;
  font-style: italic;
@@ -254,6 +246,28 @@ footer {
  animation-delay: 5s;
  animation-iteration-count: infinite;
 }
+.footer-youtube-logo {
+    display: inline-block;
+    animation-name: shake;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+.footer-link {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.footer-link:hover {
+    transform: translateY(-2px) scale(1.08);
+}
+.connect-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: white;
+    padding: 2px;
+}
 .signature {
  font-size: 35px;
  text-align: center;
@@ -263,10 +277,6 @@ footer {
  -webkit-text-stroke: 1px #051d72;
  text-shadow: 3px 3px #4069fd;
 } 
-.footer-link {
- /* animation: shake 2s ease-in; 
- animation-iteration-count: infinite; */
-}
 @keyframes shake {
  0% {
      transform: translate(0);
@@ -331,3 +341,73 @@ font-size: 30px;
   font-size: 20px;
   border: 2px 2px 2px black;
 } */
+
+/* --- Responsive & Accessibility Improvements --- */
+@media (max-width: 900px) {
+  .brand, .codes, .about-container, .about-hero, .skills-section, .experience-section, .values-section {
+    width: 100vw;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  .All-navs {
+    font-size: 36px;
+    right: 2%;
+  }
+  .subtitles, .subtitles2 {
+    font-size: 1.2rem;
+    padding-top: 16px;
+  }
+  .logobrand, img#logobrand {
+    width: 180px;
+    height: 180px;
+    position: static;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  .myBtn {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .Focus {
+    margin-left: 0;
+    font-size: 2rem;
+  }
+  .SML-container img {
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+  }
+  .copyright h1, .signature {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .brand, .codes, .about-container, .about-hero, .skills-section, .experience-section, .values-section {
+    padding: 0 0.5rem;
+  }
+  .subtitles, .subtitles2 {
+    font-size: 1rem;
+    padding-top: 8px;
+  }
+  .logobrand, img#logobrand {
+    width: 120px;
+    height: 120px;
+  }
+  .myBtn {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .Focus {
+    font-size: 1.1rem;
+  }
+  .SML-container img {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+  }
+}
+/* Focus outline for accessibility */
+a:focus, button:focus, .resume-btn:focus, .myBtn:focus {
+  outline: 2px solid #4069fd;
+  outline-offset: 2px;
+}

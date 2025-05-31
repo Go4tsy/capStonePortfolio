@@ -1,5 +1,4 @@
 import React from 'react';
-import pfp from './Photos/pfp.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import Menu from './Components/Menu';
@@ -10,7 +9,7 @@ const Header = ({ menuOpen, toggleMenu, handleResumeClick }) => {
     <header className="header-container">
       <div className="header-logo-container">
         <Link to="/">
-          <img className="header-logo" src={pfp} alt="Sean Etienne logo" />
+          <img className="header-logo" src="/images/pfp.png" alt="Sean-Moses Etienne logo" />
         </Link>
       </div>
       <nav className="header-nav desktop-nav" aria-label="Main navigation">
@@ -18,9 +17,9 @@ const Header = ({ menuOpen, toggleMenu, handleResumeClick }) => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/bio">Bio</Link></li>
+          <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={handleResumeClick}>Resume</a></li>
+          <li><a href="/api/download-resume" target="_blank" rel="noopener noreferrer" onClick={handleResumeClick} download>Resume</a></li>
         </ul>
       </nav>
       <div className="header-hamburger-menu">

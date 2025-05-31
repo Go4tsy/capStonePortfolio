@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import CreatePost from './CreatePost';
+import BlogPostPreview from './BlogPostPreview';
+import TagFilter from './TagFilter';
 import './Blog.css';
 
-const initialPosts = [
-  {
-    id: 1,
-    author: 'Sean Etienne',
-    content: 'Welcome to my new blog! Feel free to comment and interact.',
-    date: new Date().toLocaleString(),
-  },
-  {
-    id: 2,
-    author: 'Sean Etienne',
-    content: 'This is a sample post. You can create, edit, or delete posts just like on Facebook!',
-    date: new Date().toLocaleString(),
-  },
-];
+const initialPosts = [];
 
 function Blog() {
   const [posts, setPosts] = useState(initialPosts);
   const [showCreate, setShowCreate] = useState(false);
   const [editPost, setEditPost] = useState(null);
+  const [selectedTag, setSelectedTag] = useState('');
+
+  // Fetch blog posts from public/blogPosts.json on mount
+  useEffect(() => {
+    fetch('/blogPosts.json')
+      .then(res => res.json())
+      .then(data => setPosts(data))
+      .catch(err => console.error('Failed to load blog posts:', err));
+  }, []);
+
+  // Extract unique tags from posts
+  const allTags = Array.from(new Set(posts.flatMap(post => post.tags || [])));
+
+  // Filter posts by selected tag
+  const filteredPosts = selectedTag ? posts.filter(post => post.tags && post.tags.includes(selectedTag)) : posts;
 
   const handleCreate = (newPost) => {
     if (editPost) {
@@ -56,7 +60,8 @@ function Blog() {
         <meta name="description" content="Read and interact with posts by Sean Etienne. Create, edit, or delete your own posts." />
       </Helmet>
       <div className="blog">
-        <h2>Blog & Posts</h2>
+        <h2 className="text-2xl font-bold text-center my-4">Blog & Posts</h2>
+        <TagFilter tags={allTags} currentTag={selectedTag} onTagSelect={setSelectedTag} />
         <button
           style={{
             background: 'linear-gradient(90deg, #4069fd 0%, #274B63 100%)',
@@ -88,17 +93,9 @@ function Blog() {
           />
         )}
         <div className="blog-list">
-          {posts.length === 0 && <p style={{ textAlign: 'center', color: '#888', fontSize: '1.1rem', marginTop: 40 }}>No posts yet. Be the first to post!</p>}
-          {posts.map(post => (
-            <article key={post.id} className="blog-article">
-              <div style={{ fontWeight: 700, color: '#4069fd', marginBottom: 2, fontSize: '1.1rem' }}>{post.author}</div>
-              <div style={{ marginBottom: 6, whiteSpace: 'pre-line', fontSize: '1.1rem', color: '#222' }}>{post.content}</div>
-              <time style={{ fontSize: '0.95rem', color: '#888', marginBottom: 2 }}>{post.date}</time>
-              <div className="blog-actions">
-                <button onClick={() => handleEdit(post)} className="blog-edit-btn" aria-label={`Edit post by ${post.author}`}>Edit</button>
-                <button onClick={() => handleDelete(post.id)} className="blog-delete-btn" aria-label={`Delete post by ${post.author}`}>Delete</button>
-              </div>
-            </article>
+          {filteredPosts.length === 0 && <p style={{ textAlign: 'center', color: '#888', fontSize: '1.1rem', marginTop: 40 }}>No posts yet. Be the first to post!</p>}
+          {filteredPosts.map(post => (
+            <BlogPostPreview key={post.id} post={post} />
           ))}
         </div>
       </div>

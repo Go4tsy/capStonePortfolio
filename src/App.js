@@ -3,11 +3,11 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Route, useLocation, Routes } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import ReactGA from 'react-ga';
+import { trackPageView, trackResumeDownload } from './configs/analytics';
 import Footer from './Footer';
 import Header from './Header';
 
-const Bio = lazy(() => import('./Components/Bio.js'));
+const AboutMe = lazy(() => import('./Components/AboutMe.js'));
 const Contact = lazy(() => import('./Components/Contact'));
 const Banner = lazy(() => import('./Banner/Banner'));
 const ProjectPage = lazy(() => import('./Project Components/ProjectGrid'));
@@ -31,22 +31,18 @@ function App() {
   }, [fullPath])
 
   useEffect(() => {
-    fetch('/src/Project Components/projects.json')
+    fetch('/projects.json')
       .then(res => res.json())
-      .then(data => setProjects(data));
+      .then(data => setProjects(data))
+      .catch(error => console.error('Error loading projects:', error));
   }, []);
 
-  // Google Analytics - s/o tylerConfeti
-  ReactGA.initialize(process.env.REACT_APP_ANALYTICS);
-  ReactGA.pageview(window.location.pathname);
+  useEffect(() => {
+    trackPageView(window.location.pathname);
+  }, []);
 
   const handleResumeClick = () => {
-    ReactGA.event({
-      category: "Links",
-      action: "Resume",
-      label: "Resume Link Clicked",
-      value: 1
-    })
+    trackResumeDownload();
   }
 
   return (
@@ -73,6 +69,16 @@ function App() {
                   <Banner menuOpen={menuOpen} toggleMenu={toggleMenu} handleResumeClick={handleResumeClick} darkMode={darkMode} />
                 </motion.div>
               } />
+              <Route path='/about' element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <AboutMe />
+                </motion.div>
+              } />
               <Route path='/bio' element={
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -80,7 +86,7 @@ function App() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Bio />
+                  <AboutMe />
                 </motion.div>
               } />
               <Route path='/contact' element={

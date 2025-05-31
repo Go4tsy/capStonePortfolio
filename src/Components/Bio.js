@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../Photos/logo.jpg'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
@@ -18,10 +17,10 @@ const Bio = () => {
             <title>Bio | Sean Etienne Portfolio</title>
             <meta name="description" content="Learn more about Sean Etienne, his background, skills, and experience." />
         </Helmet>
-        <main>
+        <main role="main">
             <div style={{ textAlign: 'center', margin: '2rem 0' }}>
                 <a
-                    href="/resume.pdf"
+                    href="/api/download-resume"
                     download
                     className="resume-download-btn"
                     style={{
@@ -39,13 +38,13 @@ const Bio = () => {
                     Download Resume
                 </a>
             </div>
-            <section className="brand" aria-label="Brand introduction">
+            <section className="brand flex flex-col items-center md:items-start" aria-label="Brand introduction">
                 <h1 className="subtitles"> Transform your brand</h1>
                 <p>I am a freelancer Software engineer. Specialized in helping brands grow fast and sucessfully. My goal is to help you reach your goals. Let's think big together, i want to help people improve their lives with products designed by me. Let me hear your story.</p>
-                <img id="logobrand" src={logo} alt="Sean Etienne brand logo" loading="lazy" />
+                <img id="logobrand" src="/images/logo.jpg" alt="Sean Etienne brand logo" loading="lazy" />
             </section>
 
-            <section className="codes" aria-label="Life codes">
+            <section className="codes flex flex-col items-center md:items-start" aria-label="Life codes">
                 <h1 className="subtitles2"> My life codes</h1>
                 <Button  className="myBtn" onClick={() => setOpen(!open)} aria-controls="example-fade-text" aria-expanded={open}>
                     Click me

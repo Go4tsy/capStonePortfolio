@@ -1,0 +1,331 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8eaf2 0%, #c1cbd6 100%);
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1a2951, #0f1729);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    color: #0a0f1c;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.intro-description, .intro-mission {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #252b35;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.intro-description strong {
+    color: #1a2951;
+    font-weight: 600;
+}
+
+.resume-section {
+    margin-top: 2rem;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #1a2951, #0f1729);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 25px rgba(26, 41, 81, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(26, 41, 81, 0.5);
+    color: white;
+    text-decoration: none;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0a0f1c;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #1a2951, #0f1729);
+    border-radius: 2px;
+}
+
+/* Experience Section */
+.experience-section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #1a2951, #0f1729);
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 60px;
+}
+
+.exp-marker {
+    position: absolute;
+    left: 11px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #1a2951;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(26, 41, 81, 0.3);
+}
+
+.exp-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid #1a2951;
+}
+
+.exp-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0a0f1c;
+    margin-bottom: 0.5rem;
+}
+
+.exp-period {
+    font-size: 1rem;
+    color: #1a2951;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.exp-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2a3441;
+    margin: 0;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.20);
+}
+
+.skill-category-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0a0f1c;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #e8eaf2, #c1cbd6);
+    color: #1a2951;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #9ca8b5;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #1a2951, #0f1729);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Values Section */
+.values-section {
+    padding: 2rem 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.20);
+}
+
+.value-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0a0f1c;
+    margin-bottom: 1rem;
+}
+
+.value-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2a3441;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .intro-text h2 {
+        font-size: 2rem;
+    }
+
+    .intro-description, .intro-mission {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .experience-timeline::before {
+        left: 15px;
+    }
+
+    .experience-item {
+        padding-left: 45px;
+    }
+
+    .exp-marker {
+        left: 6px;
+    }
+
+    .exp-content {
+        padding: 1.5rem;
+    }
+
+    .skills-grid, .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category, .value-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .intro-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .resume-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 
