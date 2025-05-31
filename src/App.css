@@ -18,7 +18,6 @@ html {
  width: 100%;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
- scroll-behavior: smooth;
  touch-action: manipulation;
  box-sizing: border-box;
 }

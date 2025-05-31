@@ -42,13 +42,6 @@ function Banner({ menuOpen, toggleMenu }) {
         return () => clearInterval(interval);
     }, [technologies.length]);
 
-    useEffect(() => {
-        window.addEventListener("scroll", toggleMenu);
-        return () => {
-            window.removeEventListener("scroll", toggleMenu);
-        }
-    }, [toggleMenu])
-
     const handleProjectsClick = () => {
         setSpinning(true);
         setTimeout(() => {

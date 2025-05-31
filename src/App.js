@@ -27,10 +27,6 @@ function App() {
   let fullPath = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [fullPath])
-
-  useEffect(() => {
     fetch('/projects.json')
       .then(res => res.json())
       .then(data => setProjects(data))
