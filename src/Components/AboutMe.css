@@ -21,11 +21,13 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
     font-family: 'Inter', sans-serif;
+    word-break: break-word;
 }
 
 .about-intro {
     max-width: 800px;
     margin: 0 auto;
+    word-break: break-word;
 }
 
 .intro-text h2 {
@@ -33,14 +35,16 @@
     color: #0a0f1c;
     margin-bottom: 1.5rem;
     font-weight: 700;
+    word-break: break-word;
 }
 
-.intro-description, .intro-mission {
+.intro-description, .intro-mission, .intro-values {
     font-size: 1.25rem;
     line-height: 1.8;
     color: #252b35;
     margin-bottom: 1.5rem;
     text-align: left;
+    word-break: break-word;
 }
 
 .intro-description strong {
@@ -278,7 +282,7 @@
         font-size: 2rem;
     }
 
-    .intro-description, .intro-mission {
+    .intro-description, .intro-mission, .intro-values {
         font-size: 1.1rem;
     }
 
@@ -327,5 +331,48 @@
     .resume-btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* --- About Hero Text Responsiveness --- */
+@media (max-width: 900px) {
+    .about-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .intro-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .intro-description, .intro-mission, .intro-values {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+    .about-intro {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.7rem;
+    }
+    .intro-text h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    .intro-description, .intro-mission, .intro-values {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.7rem;
+        text-align: center;
+        padding: 0 0.2rem;
+    }
+    .about-intro {
+        padding: 0 0.2rem;
     }
 } 

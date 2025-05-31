@@ -14,7 +14,6 @@ const Navigation = () => {
                 <li><Link className="link-tag" to="/projects">Projects</Link></li>
                 <li><Link className="link-tag" to="/blog">Blog</Link></li>
                 <li><Link className="link-tag" to="/contact">Contact</Link></li>
-                <li><a className="link-tag" href="/api/download-resume" target="_blank" rel="noopener noreferrer" download>Resume</a></li>
             </ul>
         </nav>
     );

@@ -19,7 +19,6 @@ const Header = ({ menuOpen, toggleMenu, handleResumeClick }) => {
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><a href="/api/download-resume" target="_blank" rel="noopener noreferrer" onClick={handleResumeClick} download>Resume</a></li>
         </ul>
       </nav>
       <div className="header-hamburger-menu">

@@ -180,47 +180,50 @@ img .headpic  {
 
 }
 footer {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 100%;
   position: relative;
   background-image: linear-gradient(white, #051d72);
+  padding: 2rem 0 1rem 0;
+  box-sizing: border-box;
 }
-.copyright{
- bottom: 0;
- position: absolute;
- color: white;
- -webkit-text-stroke: 1px #051d72;
- text-shadow: 3px 3px #4069fd;
+.SML-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.SML-container{
- width: 100vw;
- text-align: center;
+.SML-container img, .connect-logo {
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  background: white;
+  padding: 2px;
 }
-.SML-container img {
- display: inline-flex;
- flex-wrap: nowrap;
- width: 100px;
- height: 100px;
- margin: 20px;
+.copyright {
+  position: static;
+  color: white;
+  -webkit-text-stroke: 1px #051d72;
+  text-shadow: 3px 3px #4069fd;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
-/* s/o css-tricks animation */
-@keyframes shake {
- 10%, 90% {
-     transform: translate3d(-1px, 0, 0);
-   }
-   
-   20%, 80% {
-     transform: translate3d(2px, 0, 0);
-   }
- 
-   30%, 50%, 70% {
-     transform: translate3d(-4px, 0, 0);
-   }
- 
-   40%, 60% {
-     transform: translate3d(4px, 0, 0);
-   }
+.signature {
+  font-size: 1.1rem;
+  text-align: center;
+  width: 100vw;
+  margin: 0.5rem 0 0 0;
+  color: white;
+  -webkit-text-stroke: 1px #051d72;
+  text-shadow: 3px 3px #4069fd;
 }
 .footer-linkedin-logo {
  display: inline-block;
@@ -268,87 +271,24 @@ footer {
 .footer-link:hover {
     transform: translateY(-2px) scale(1.08);
 }
-.connect-logo {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    background: white;
-    padding: 2px;
-}
-.signature {
- font-size: 35px;
- text-align: center;
- width: 100vw;
- margin: 10px;
- color: white;
- -webkit-text-stroke: 1px #051d72;
- text-shadow: 3px 3px #4069fd;
-} 
+/* s/o css-tricks animation */
 @keyframes shake {
- 0% {
-     transform: translate(0);
- }
-
-20%,
-40%,
-60%,
-90%{
- transform:translate(.8em);
- box-shadow: 0px 10px 30px black;
+ 10%, 90% {
+     transform: translate3d(-1px, 0, 0);
+   }
+   
+   20%, 80% {
+     transform: translate3d(2px, 0, 0);
+   }
+ 
+   30%, 50%, 70% {
+     transform: translate3d(-4px, 0, 0);
+   }
+ 
+   40%, 60% {
+     transform: translate3d(4px, 0, 0);
+   }
 }
-10%,
-30%,
-50%{
- transform: translate(-2.em);
-}
-70%,
-100%{
- transform: translate(0);
-}   
-}
-
-/* .Contactlogo img {
-  float: left;
-  display: inline-flex;
-  text-align: center;
-  margin: auto 5px;
-} */
-
-legend {
-  text-align: center;
-  font-size: 50px;
-  color: #ffffff;
-}
-.formbtn {
-  -webkit-text-stroke: 1px #ffffff;
-  text-shadow: 3px 3px #4069fd;
-}
-form {
-  font-size: 40px;
-
-}
-label {
--webkit-text-stroke: 1px #ffffff;
-text-shadow: 3px 3px #4069fd;
-font-family: 'Euphoria Script', cursive;
-}
-input {
-font-size: 30px;
-}
-
-.projectCard {
-  display: inline-block;
-  
-}
-.textCard {
-  font-size: medium;
-}
-
-/* .ArrowIcon {
-  font-size: 20px;
-  border: 2px 2px 2px black;
-} */
 
 /* --- Responsive & Accessibility Improvements --- */
 @media (max-width: 900px) {
@@ -380,12 +320,16 @@ font-size: 30px;
     margin-left: 0;
     font-size: 2rem;
   }
-  .SML-container img {
-    width: 48px;
-    height: 48px;
-    margin: 8px;
+  .SML-container {
+    flex-direction: row;
+    gap: 0.5rem;
   }
-  .copyright h1, .signature {
+  .SML-container img, .connect-logo {
+    width: 36px;
+    height: 36px;
+    margin: 4px;
+  }
+  .signature {
     font-size: 1rem;
   }
 }
@@ -408,14 +352,53 @@ font-size: 30px;
   .Focus {
     font-size: 1.1rem;
   }
-  .SML-container img {
-    width: 32px;
-    height: 32px;
-    margin: 4px;
+  .SML-container {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .SML-container img, .connect-logo {
+    width: 28px;
+    height: 28px;
+    margin: 2px;
+  }
+  .copyright h1, .signature {
+    font-size: 0.9rem;
   }
 }
 /* Focus outline for accessibility */
 a:focus, button:focus, .resume-btn:focus, .myBtn:focus {
   outline: 2px solid #4069fd;
   outline-offset: 2px;
+}
+
+/* --- About Hero Responsiveness --- */
+.about-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  text-align: left;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+@media (max-width: 900px) {
+  .about-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 1rem 0;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .about-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }

@@ -35,9 +35,6 @@ function Menu({ toggleMenu, handleResumeClick }) {
             <Link className="link-tag" to="/contact" onClick={toggleMenu}>
                 <li className="list-item-main">Contact</li>
             </Link>
-            <Link className="link-tag" to="/api/download-resume" download onClick={toggleMenu}>
-                Resume
-            </Link>
         </ul>
         {path !== '/' &&
         <div className="menu-background-container">
