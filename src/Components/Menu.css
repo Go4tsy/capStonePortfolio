@@ -1,12 +1,11 @@
 .menu {
     width: 100vw;
     height: 100vh;
-    /* background-color: transparent; */
-    /* background-color: #274B63; */
-    display: flex;
-    /* position: absolute; */
+    position: fixed;
     top: 0;
     left: 0;
+    background: rgba(26, 41, 81, 0.96); /* semi-transparent dark overlay */
+    display: flex;
     justify-content: center;
     align-items: center;
     color: #d1d5db; /* Much darker white */
@@ -14,7 +13,8 @@
     font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
-    z-index: 10;
+    z-index: 2000;
+    overflow-y: auto;
 }
 
 @media (min-width: 901px) {

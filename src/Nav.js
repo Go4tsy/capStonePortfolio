@@ -1,44 +1,22 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Link, useLocation } from 'react-router-dom';
 
-
-
-// link to those components 
-// bootstrap nav 
-
+// Desktop navigation for 641px and above, matching Menu.js structure
 const Navigation = () => {
+    let fullPath = useLocation();
+    let path = fullPath.pathname;
+
     return (
-            <Navbar className="All-navs" expand="lg">
-                <Container  className="navs" >
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="All-navs">
-
-                        <Nav.Link href="/bio"  className="navs">
-
-                            Bio
-                        </Nav.Link>
-
-                        <Nav.Link href="/projects"   className="navs">
-
-                           Projects
-                        </Nav.Link>
-
-                        <Nav.Link className="navs" href="https://docs.google.com/document/d/1gXLg4DcfFMO_JcrsPLrQwhHNx9cIUznX5cd3gs6Hptw/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-
-                            Resume
-                        </Nav.Link>
-
-                        <Nav.Link href="/contact"  className="navs">
-
-                           Contact
-                        </Nav.Link>
-                    </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+        <nav className="desktop-nav" aria-label="Main navigation">
+            <ul className="header-nav-list">
+                <li><Link className="link-tag" to="/">Home</Link></li>
+                <li><Link className="link-tag" to="/about">About</Link></li>
+                <li><Link className="link-tag" to="/projects">Projects</Link></li>
+                <li><Link className="link-tag" to="/blog">Blog</Link></li>
+                <li><Link className="link-tag" to="/contact">Contact</Link></li>
+                <li><a className="link-tag" href="/api/download-resume" target="_blank" rel="noopener noreferrer" download>Resume</a></li>
+            </ul>
+        </nav>
     );
 };
 

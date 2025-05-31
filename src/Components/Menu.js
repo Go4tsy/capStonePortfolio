@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 import './Menu.css';
 
@@ -7,6 +8,14 @@ function Menu({ toggleMenu, handleResumeClick }) {
     
     let fullPath = useLocation();
     let path = fullPath.pathname;
+
+    useEffect(() => {
+        // Lock scroll when menu is open
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, []);
 
     return (
         <div className="menu" role="navigation" aria-label="Mobile menu">
